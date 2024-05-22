@@ -1,4 +1,4 @@
-package io.mavka.demo.spring.transactionl;
+package io.mavka.demo.spring.transactional;
 
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
