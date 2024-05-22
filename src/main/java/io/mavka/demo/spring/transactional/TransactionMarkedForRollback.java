@@ -1,5 +1,6 @@
 package io.mavka.demo.spring.transactional;
 
+import io.mavka.demo.spring.transactional.dto.User;
 import io.mavka.demo.spring.transactional.exception.CustomRuntimeException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,4 +1,4 @@
-package io.mavka.demo.spring.transactional;
+package io.mavka.demo.spring.transactional.dto;
 
 import java.util.Objects;
 
