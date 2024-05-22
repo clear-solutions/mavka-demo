@@ -1,6 +1,6 @@
 package io.mavka.demo.spring.transactional;
 
-import org.springframework.security.core.userdetails.User;
+import io.mavka.demo.spring.transactional.exception.CustomRuntimeException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,7 +17,7 @@ public class TransactionMarkedForRollback {
     public void processUser(User user) {
         try {
             userService.createUser(user);
-        } catch (CustomException e) {
+        } catch (CustomRuntimeException e) {
             // Handle exception
         }
     }
@@ -29,12 +29,8 @@ public class TransactionMarkedForRollback {
         public void createUser(User user) {
             // Simulate an error condition
             if (user == null) {
-                throw new CustomException();
+                throw new CustomRuntimeException();
             }
         }
-    }
-
-    public class CustomException extends RuntimeException {
-        // custom exception
     }
 }

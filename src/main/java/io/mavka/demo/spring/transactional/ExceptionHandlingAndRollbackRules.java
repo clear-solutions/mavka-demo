@@ -1,6 +1,6 @@
 package io.mavka.demo.spring.transactional;
 
-import org.springframework.security.core.userdetails.User;
+import io.mavka.demo.spring.transactional.exception.CustomException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -10,9 +10,5 @@ public class ExceptionHandlingAndRollbackRules {
     @Transactional
     public void createUser(User user) throws CustomException {
         // logic that throws CustomException
-    }
-
-    public class CustomException extends Exception {
-        // custom exception
     }
 }
